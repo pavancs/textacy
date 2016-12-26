@@ -6,7 +6,7 @@ from __future__ import absolute_import, division, print_function, unicode_litera
 import logging
 import re
 
-from cld2 import detect as cld2_detect
+#from cld2 import detect as cld2_detect
 
 from textacy.compat import PY2, unicode_to_bytes
 from textacy.constants import (ACRONYM_REGEX, DANGLING_PARENS_TERM_RE,
@@ -78,7 +78,7 @@ def detect_language(text):
     if is_reliable is False:
         msg = 'Text language detected with low confidence; best guesses: %s'
         logger.warning(msg, best_guesses)
-    return best_guesses[0][1]
+    return "en"
 
 
 def keyword_in_context(text, keyword, ignore_case=True,
